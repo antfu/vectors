@@ -102,9 +102,9 @@ export default class Vector2 extends VectorN {
     return this.x * v.y - this.y * v.x
   }
   projectTo(v: Vector2) {
-    return Vector2.fromPolar(v.angle, this.projectToLegnth(v))
+    return Vector2.fromPolar(v.angle, this.projectionLegnth(v))
   }
-  projectToLegnth(v: Vector2) {
+  projectionLegnth(v: Vector2) {
     return this.length * Math.cos(-this.angleBetween(v))
   }
   angleBetween(v: Vector2) {
