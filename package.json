@@ -1,11 +1,14 @@
 {
-  "name": "vector.js",
+  "name": "vectors",
   "version": "0.0.1",
-  "description": "",
-  "keywords": [],
-  "main": "dist/vector-js.umd.js",
-  "module": "dist/vector-js.es5.js",
-  "typings": "dist/types/vector-js.d.ts",
+  "description": "A 2D & 3D & ND immutable vector library for Javascript.",
+  "keywords": [
+    "math",
+    "vector"
+  ],
+  "main": "dist/vectors.umd.js",
+  "module": "dist/vectors.es5.js",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
