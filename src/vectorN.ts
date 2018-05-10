@@ -18,6 +18,9 @@ export default class VectorN {
   static fromArray(arr: Array<any>) {
     return new VectorN(arr.length, arr)
   }
+  static zeros(dimension: number) {
+    return new VectorN(dimension, new Array(dimension).fill(0))
+  }
 
   get values() {
     return this._values.map(x => x)
