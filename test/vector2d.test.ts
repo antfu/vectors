@@ -164,7 +164,7 @@ describe('Vector2D', () => {
       expect(vec2).toBeInstanceOf(Vector2D)
 
       expect(vec2.length).toBeCloseTo(vec1.length)
-      expect(vec2.angle).toBeCloseTo(vec2.angle + Math.PI / 3)
+      expect(vec2.angle).toBeCloseTo(vec1.angle + Math.PI / 3)
     })
     it('#negative()', () => {
       const vec1 = new Vector2D(20, -40)
@@ -176,8 +176,8 @@ describe('Vector2D', () => {
       expect(vec2.y).toBe(40)
     })
     it('#dot()', () => {
-      const vec1 = new Vector2D(20, 40)
-      const vec2 = new Vector2D(30, 20)
+      const vec1 = new Vector2D(42, 21)
+      const vec2 = new Vector2D(44, 42)
       const result = vec1.dot(vec2)
 
       expect(result).toBe(2730)

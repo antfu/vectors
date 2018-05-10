@@ -1,9 +1,7 @@
 import version from './version'
+import VectorN from './vectorN'
 
-export default class Vector2D {
-  private _x = 0
-  private _y = 0
-
+export default class Vector2D extends VectorN {
   static version = version
   static ZERO = new Vector2D()
   static with(x: number, y: number) {
@@ -20,15 +18,14 @@ export default class Vector2D {
   }
 
   constructor(x: number = 0, y: number = 0) {
-    this._x = x || 0
-    this._y = y || 0
+    super(2, [x, y])
   }
 
   get x() {
-    return this._x
+    return this.values[0]
   }
   get y() {
-    return this._y
+    return this.values[1]
   }
   get angle() {
     return Math.atan2(this.y, this.x)
@@ -107,9 +104,6 @@ export default class Vector2D {
   }
   angleBetween(v: Vector2D) {
     return this.angle - v.angle
-  }
-  equals(v: Vector2D) {
-    return this.x === v.x && this.y === v.y
   }
   toObject(xAlias = 'x', yAlias = 'y') {
     return {
